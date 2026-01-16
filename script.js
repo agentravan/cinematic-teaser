@@ -1,33 +1,22 @@
-// script.js
-document.addEventListener("DOMContentLoaded", () => {
-  const scenes = document.querySelectorAll(".scene");
-  const buttons = document.querySelectorAll("button");
-  const music = document.getElementById("bg-music");
-  music.volume = 0.2;
+let current = 1;
+const total = 5;
 
-  let currentScene = 0;
+function nextScene() {
+  const currentScene = document.getElementById(`scene${current}`);
+  currentScene.classList.remove("active");
 
-  buttons.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      scenes[currentScene].classList.remove("active");
-      currentScene = index + 1;
-      if (currentScene < scenes.length) {
-        scenes[currentScene].classList.add("active");
-      }
-    });
-  });
+  current++;
+  if (current <= total) {
+    const next = document.getElementById(`scene${current}`);
+    setTimeout(() => next.classList.add("active"), 300);
+  }
+}
 
-  // Disable scrolling completely
-  window.addEventListener("scroll", (e) => {
-    e.preventDefault();
-    window.scrollTo(0, 0);
-  });
+// block scrolling completely
+window.addEventListener("wheel", e => e.preventDefault(), { passive: false });
+window.addEventListener("touchmove", e => e.preventDefault(), { passive: false });
 
-  document.body.addEventListener("wheel", (e) => e.preventDefault(), { passive: false });
-  document.body.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
-  document.body.addEventListener("keydown", (e) => {
-    if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Space"].includes(e.code)) {
-      e.preventDefault();
-    }
-  });
-});
+// force music play (mobile)
+document.addEventListener("click", () => {
+  document.getElementById("bgMusic").play();
+}, { once: true });
