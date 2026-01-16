@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>For You</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>For You</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -12,40 +12,43 @@
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<div class="scene active" id="scene1">
+<div class="particles"></div>
+
+<div class="scene active">
   <p class="hint">Please don’t scroll</p>
-  <h1>Hey Tisha…</h1>
-  <p>This isn’t a normal birthday wish.</p>
-  <button onclick="nextScene()">Continue</button>
+  <h1 class="type">Hey Tisha…</h1>
+  <p class="type delay">This isn’t a normal birthday wish.</p>
+  <button class="pulse" onclick="nextScene()">Continue</button>
 </div>
 
-<div class="scene" id="scene2">
-  <h1>Today is your day 🎂</h1>
-  <p>Soft smiles. Calm thoughts.  
-     Happy Birthday.</p>
-  <button onclick="nextScene()">Next</button>
+<div class="scene">
+  <h1 class="type">Today is your day 🎂</h1>
+  <p class="type delay">Soft smiles. Calm thoughts.<br>Happy Birthday.</p>
+  <button class="pulse" onclick="nextScene()">Next</button>
 </div>
 
-<div class="scene" id="scene3">
-  <h1>In just two months…</h1>
-  <p>Your presence started to matter.  
-     Talking to you felt easy.</p>
-  <button onclick="nextScene()">Keep going</button>
+<div class="scene">
+  <h1 class="type">In just two months…</h1>
+  <p class="type delay">Your presence started to matter.<br>Talking to you felt easy.</p>
+  <button class="pulse" onclick="nextScene()">Keep going</button>
 </div>
 
-<div class="scene" id="scene4">
-  <h1>Some connections</h1>
-  <p>Don’t need years.  
-     They just feel right.</p>
-  <button onclick="nextScene()">One last thing</button>
+<div class="scene">
+  <h1 class="type">Some connections</h1>
+  <p class="type delay">Don’t need years.<br>They just feel right.</p>
+  <button class="pulse" onclick="nextScene()">One last thing</button>
 </div>
 
-<div class="scene" id="scene5">
-  <h1>I like you, Tisha ❤️</h1>
-  <p>Not in pressure.  
-     Not in rush.  
-     Just genuinely.</p>
-  <p class="proposal">Would you like to give <b>us</b> a chance?</p>
+<div class="scene">
+  <h1 class="type heartbeat">I like you, Tisha ❤️</h1>
+  <p class="type delay">
+    Not in rush.<br>
+    Not in pressure.<br>
+    Just genuinely.
+  </p>
+  <p class="proposal heartbeat">
+    Would you like to give <b>us</b> a chance?
+  </p>
 </div>
 
 <script src="script.js"></script>
