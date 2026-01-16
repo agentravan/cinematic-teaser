@@ -1,54 +1,53 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cinematic Teaser</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>For You</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-  <audio id="bg-music" autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
 
-  <div id="scenes">
-    <section class="scene active" id="scene1">
-      <div class="content">
-        <p>Do not scroll.<br>Click the button to begin.</p>
-        <button>Start</button>
-      </div>
-    </section>
+<audio id="bgMusic" autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
-    <section class="scene" id="scene2">
-      <div class="content">
-        <p>Happy Birthday.<br>May this moment stay with you.</p>
-        <button>Next</button>
-      </div>
-    </section>
+<div class="scene active" id="scene1">
+  <p class="hint">Please don’t scroll</p>
+  <h1>Hey Tisha…</h1>
+  <p>This isn’t a normal birthday wish.</p>
+  <button onclick="nextScene()">Continue</button>
+</div>
 
-    <section class="scene" id="scene3">
-      <div class="content">
-        <p>Every shared laugh.<br>Every quiet pause.</p>
-        <button>Next</button>
-      </div>
-    </section>
+<div class="scene" id="scene2">
+  <h1>Today is your day 🎂</h1>
+  <p>Soft smiles. Calm thoughts.  
+     Happy Birthday.</p>
+  <button onclick="nextScene()">Next</button>
+</div>
 
-    <section class="scene" id="scene4">
-      <div class="content">
-        <p>I need to say this.<br>It’s been in my heart.</p>
-        <button>Next</button>
-      </div>
-    </section>
+<div class="scene" id="scene3">
+  <h1>In just two months…</h1>
+  <p>Your presence started to matter.  
+     Talking to you felt easy.</p>
+  <button onclick="nextScene()">Keep going</button>
+</div>
 
-    <section class="scene" id="scene5">
-      <div class="content">
-        <p>Will you walk with me.<br>Into the next chapter?</p>
-        <button>Answer</button>
-      </div>
-    </section>
-  </div>
+<div class="scene" id="scene4">
+  <h1>Some connections</h1>
+  <p>Don’t need years.  
+     They just feel right.</p>
+  <button onclick="nextScene()">One last thing</button>
+</div>
 
-  <script src="script.js"></script>
+<div class="scene" id="scene5">
+  <h1>I like you, Tisha ❤️</h1>
+  <p>Not in pressure.  
+     Not in rush.  
+     Just genuinely.</p>
+  <p class="proposal">Would you like to give <b>us</b> a chance?</p>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
